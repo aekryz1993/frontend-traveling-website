@@ -1,0 +1,120 @@
+.container {
+  position: fixed;
+  composes: fRow aifCenter jcfSpaceBetween from "../layouts/flex-layout.css";
+  padding: 1em 1.5em;
+  background-color: transparent;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+}
+
+.navLinks li {
+  display: inline-block;
+  padding: 0 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .line {
+    composes: line from "../utilities/navbar-Button.css";
+    background: black;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .showNav {
+    composes: openednbButton from "../utilities/navbar-Button.css";
+  }
+
+  .navLinks {
+    background: #525252;
+    composes: hiddenCircle from "../utilities/circle-navbar.css";
+  }
+
+  .navLinks.open {
+    clip-path: circle(300vh at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+
+  .line.open:nth-child(1) {
+    position: absolute;
+    right: 0em;
+    top: 0.5em;
+    transform: rotate(-40deg);
+    transition: 0.5s ease;
+    -webkit-transform: rotate(-40deg);
+    -moz-transform: rotate(-40deg);
+    -ms-transform: rotate(-40deg);
+    -o-transform: rotate(-40deg);
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+  }
+  .line.open:nth-child(2) {
+    display: none;
+  }
+  .line.open:nth-child(3) {
+    position: absolute;
+    right: 0em;
+    top: 0.5em;
+    transform: rotate(40deg);
+    transition: 0.5s ease;
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+  }
+
+  .navLinks .navItem {
+    opacity: 0;
+  }
+
+  .navLinks .navItem .navLink {
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .navLinks .navItem:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+    -webkit-transition: all 0.5s ease 0.2s;
+    -moz-transition: all 0.5s ease 0.2s;
+    -ms-transition: all 0.5s ease 0.2s;
+    -o-transition: all 0.5s ease 0.2s;
+  }
+  .navLinks .navItem:nth-child(2) {
+    transition: all 0.5s ease 0.3s;
+    -webkit-transition: all 0.5s ease 0.3s;
+    -moz-transition: all 0.5s ease 0.3s;
+    -ms-transition: all 0.5s ease 0.3s;
+    -o-transition: all 0.5s ease 0.3s;
+  }
+  .navLinks .navItem:nth-child(3) {
+    transition: all 0.5s ease 0.4s;
+    -webkit-transition: all 0.5s ease 0.4s;
+    -moz-transition: all 0.5s ease 0.4s;
+    -ms-transition: all 0.5s ease 0.4s;
+    -o-transition: all 0.5s ease 0.4s;
+  }
+  .navLinks .navItem:nth-child(4) {
+    transition: all 0.5s ease 0.5s;
+    -webkit-transition: all 0.5s ease 0.5s;
+    -moz-transition: all 0.5s ease 0.5s;
+    -ms-transition: all 0.5s ease 0.5s;
+    -o-transition: all 0.5s ease 0.5s;
+  }
+
+  .navItem.fade {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bgLeft {
+  position: absolute;
+  background-image: url(/picture1.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 51vw;
+  z-index: -1;
+}
+
+.text {
+  font-size: 4em;
+  font-weight: 700;
+  font-family: cursive;
+  background-image: url('https://images.unsplash.com/photo-1506773090264-ac0b07293a64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1576&q=80');
+  background-size: cover;
+  background-clip: text;
+  --webkit-background-clip: text;
+  color: transparent;
+}
