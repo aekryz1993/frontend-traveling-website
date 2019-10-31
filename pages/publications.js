@@ -1,8 +1,9 @@
 import Layout from '../components/Layout'
+import Slider from '../components/Slider'
 
 const Publications = () => (
   <Layout>
-    <div>hello Publications</div>
+    <Slider/>
   </Layout>
 )
 
