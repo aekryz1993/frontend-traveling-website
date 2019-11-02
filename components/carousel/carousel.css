@@ -6,7 +6,7 @@
   overflow: hidden;
   top: 0;
   left: 0;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .positionR {
@@ -84,4 +84,44 @@
 .image {
   width: 100vw;
   height: 100vh;
+}
+
+.paginationbuttons {
+  position: absolute;
+  top: 33vh;
+  right: 1.3em;
+}
+.pagination {
+  margin-bottom: 10px;
+  height: 25px;
+  width: 3px;
+  background: bisque;
+  cursor: pointer;
+}
+
+.buttonPrevNext {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 2em;
+  left: 4em;
+  width: 100px;
+}
+.buttonNext {
+  background: white;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+.lineButton {
+  background: white;
+  width: 30px;
+  height: 2px;
+}
+.buttonPrev {
+  background: white;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
 }

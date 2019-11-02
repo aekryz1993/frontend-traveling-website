@@ -5,11 +5,13 @@
   background-color: transparent;
   left: 0;
   right: 0;
+  z-index: 2;
 }
 
 .logo {
   width: 35px;
   height: 35px;
+  cursor: pointer;
 }
 
 .navLinks li {
@@ -29,6 +31,7 @@
 
   .showNav {
     composes: openednbButton from "../utilities/navbar-Button.css";
+    z-index: 3;
   }
 
   .navLinks {
