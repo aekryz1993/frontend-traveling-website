@@ -1,0 +1,134 @@
+.container {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.positionR {
+  position: relative;
+}
+
+.positionA {
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+}
+
+.slideShow {
+  display: flex;
+  position: absolute;
+  transform: translateX(-100vw);
+  -webkit-transform: translateX(-100vw);
+  -moz-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  -o-transform: translateX(-100vw);
+}
+
+.animation {
+  transition: transform 1s linear;
+  -webkit-transition: transform 1s linear;
+  -moz-transition: transform 1s linear;
+  -ms-transition: transform 1s linear;
+  -o-transition: transform 1s linear;
+}
+
+.slideShow.transition0l {
+  transform: translateX(-100vw);
+  -webkit-transform: translateX(-100vw);
+  -moz-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  -o-transform: translateX(-100vw);
+}
+
+.slideShow.transition1l {
+  transform: translateX(-200vw);
+  -webkit-transform: translateX(-200vw);
+  -moz-transform: translateX(-200vw);
+  -ms-transform: translateX(-200vw);
+  -o-transform: translateX(-200vw);
+}
+.slideShow.transition2l {
+  transform: translateX(-300vw);
+  -webkit-transform: translateX(-300vw);
+  -moz-transform: translateX(-300vw);
+  -ms-transform: translateX(-300vw);
+  -o-transform: translateX(-300vw);
+}
+.slideShow.transition3l {
+  transform: translateX(-400vw);
+  -webkit-transform: translateX(-400vw);
+  -moz-transform: translateX(-400vw);
+  -ms-transform: translateX(-400vw);
+  -o-transform: translateX(-400vw);
+}
+.slideShow.transition4l {
+  transform: translateX(-500vw);
+  -webkit-transform: translateX(-500vw);
+  -moz-transform: translateX(-500vw);
+  -ms-transform: translateX(-500vw);
+  -o-transform: translateX(-500vw);
+}
+.slideShow.transition5l {
+  transform: translateX(-600vw);
+  -webkit-transform: translateX(-600vw);
+  -moz-transform: translateX(-600vw);
+  -ms-transform: translateX(-600vw);
+  -o-transform: translateX(-600vw);
+}
+
+.slide {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0 0 100vw;
+  width: 100vw;
+}
+
+.image {
+  width: 50vw;
+  height: 100vh;
+}
+
+.paginationbuttons {
+  position: absolute;
+  top: 33vh;
+  right: 1.3em;
+}
+.pagination {
+  margin-bottom: 10px;
+  height: 25px;
+  width: 3px;
+  background: bisque;
+  cursor: pointer;
+}
+
+.buttonPrevNext {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 1.5em;
+  left: 2em;
+  width: 200px;
+}
+.commonPrevNext {
+  color: antiquewhite;
+  cursor: pointer;
+}
+.buttonNext {
+  composes: commonPrevNext;
+}
+.lineButton {
+  background: antiquewhite;
+  width: 100px;
+  height: 2px;
+}
+.buttonPrev {
+  composes: commonPrevNext;
+}
