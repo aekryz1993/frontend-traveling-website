@@ -1,8 +1,8 @@
-import headerStyle from "../../stylesheet/layouts/header.css";
-import picture1 from "../../public/header/hPic1.jpg";
-import picture2 from "../../public/header/hpic2.jpg";
-import picture3 from "../../public/header/hpic3.jpg";
-import picture4 from "../../public/header/hpic4.jpg";
+import headerStyle from "../stylesheet/layouts/header.css";
+import picture1 from "../public/header/hPic1.jpg";
+import picture2 from "../public/header/hpic2.jpg";
+import picture3 from "../public/header/hpic3.jpg";
+import picture4 from "../public/header/hpic4.jpg";
 
 const Header = () => {
   const myStyle = (picture) => ({
