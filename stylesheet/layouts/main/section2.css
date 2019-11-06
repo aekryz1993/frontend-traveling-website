@@ -1,0 +1,21 @@
+.sec2 {
+  background: #111;
+  padding: 10vh 5vw 15vh;
+}
+
+.container {
+  color: #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+
+  }
+}
