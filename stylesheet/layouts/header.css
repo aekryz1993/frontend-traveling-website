@@ -1,11 +1,10 @@
 .headerSec {
-  height: 100vh;
   max-width: 100vw;
   overflow: hidden;
 }
 
 .container {
-  height: 100vh;
+  height: 90vh;
   width: 108vw;
   background-position: center;
   background-repeat: no-repeat;
@@ -100,7 +99,7 @@
     content: " ";
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 30vh;
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.432);

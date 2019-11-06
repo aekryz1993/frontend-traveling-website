@@ -10,7 +10,7 @@ const Header = () => {
   })
 
   return (
-    <section className={headerStyle.headerSec}>
+    <div className={headerStyle.headerSec} >
       <div className={headerStyle.container} style={myStyle(picture1)}>
         <div className={headerStyle.fItem1}>
           <div className={headerStyle.htitle}>
@@ -24,7 +24,7 @@ const Header = () => {
         <div className={`${headerStyle.csimg}`} style={myStyle(picture3)}></div>
         <div className={`${headerStyle.csimg}`} style={myStyle(picture4)} src={picture4}></div>
       </div>
-    </section>
+    </div>
   )
 }
 
