@@ -3,10 +3,10 @@ html,
 body,
 .html,
 .body {
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 	background: #eee;
-	margin: 0;
-	padding: 0;
+	/* margin: 0; */
+	/* padding: 0; */
 }
 
 .body {
@@ -28,8 +28,8 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
+	/* border: 0; */
+	/* font-size: 100%; */
 	font: inherit;
 	vertical-align: baseline;
 }

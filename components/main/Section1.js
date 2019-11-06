@@ -12,7 +12,7 @@ const images = [
 
 const SectionOne = () => {
   return (
-    <div className={section1Style.container} >
+    <div className={`${section1Style.container}`} >
       <div className={section1Style.header}>
         <p>Lorem Ipsum</p>
         <p>Card Lorem Ipsum</p>

@@ -39,3 +39,9 @@ img {
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex: 0 0 100%;
+  }
+}
