@@ -5,7 +5,7 @@ import { polyfill } from 'scroll-behaviour'
 import Header from "../components/Header";
 import SectionOne from '../components/main/Section1';
 import SectionTwo from '../components/main/Section2';
-import section2Style from "../stylesheet/layouts/main/section2.css";
+import SectionThree from '../components/main/Section3';
 import homeStyle from "../stylesheet/components/home.css";
 
 polyfill()
@@ -38,7 +38,8 @@ export default () => {
       <section ref={section1}><Header /></section>
       <main>
         <section ref={section2}><SectionOne /></section>
-        <section className={section2Style.sec2} ref={section3}><SectionTwo /></section>
+        <section ref={section3}><SectionTwo /></section>
+        <section ref={section4}><SectionThree /></section>
       </main>
       <div className={homeStyle.scrollToButtons}>
         <div className={homeStyle.buttonSec} onClick={() => scrollToSection(section1)} data="section1"></div>

@@ -1,13 +1,33 @@
 import Link from 'next/link';
-import React, { useState, useLayoutEffect } from 'react';
+import { useRouter } from "next/router";
+import React, { useState, useEffect, Children } from 'react';
 import navbar from '../stylesheet/components/navbar.css'
+
+const ActiveLink = ({ children, ...props }) => {
+  const router = useRouter()
+  const child = Children.only(children)
+  return (
+    <Link {...props}>
+      {React.cloneElement(child, { active: router.pathname === props.href, href: props.href })}
+    </Link>
+  )
+}
+
+const NavLink = ({active, current, href}) => {
+  
+  const isActive = (active) => active ? navbar.active : ''
+
+  return (
+    <a href={href} className={`${navbar.navLink} ${isActive(active)}`}>{current}</a>
+  )
+}
 
 const Navbar = () => {
 
   const [open, setOpen] = useState({ open: false });
   const [showbgNav, setShowbgNav] = useState(false)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [showbgNav]);
@@ -49,17 +69,17 @@ const Navbar = () => {
         </div>
         <div>
           <ul className={`${navbar.navLinks} ${openToggle()}`}>
-            <li className={`${navbar.navItem} ${fadeToggle()}`}>
-              <Link href="/"><a className={navbar.navLink}>Home</a></Link>
+            <li className={`${navbar.navItem} ${fadeToggle()} `}>
+              <ActiveLink href="/"><NavLink current={'Home'}/></ActiveLink>
             </li>
-            <li className={`${navbar.navItem} ${fadeToggle()}`}>
-              <Link href="/stories"><a className={navbar.navLink}>Stories</a></Link>
+            <li className={`${navbar.navItem} ${fadeToggle()} `}>
+              <ActiveLink href="/stories"><NavLink current={'Stories'}/></ActiveLink>
             </li>
-            <li className={`${navbar.navItem} ${fadeToggle()}`}>
-              <Link href="/publications"><a className={navbar.navLink}>Publications</a></Link>
+            <li className={`${navbar.navItem} ${fadeToggle()} `}>
+              <ActiveLink href="/publications"><NavLink current={'Publications'}/></ActiveLink>
             </li>
-            <li className={`${navbar.navItem} ${fadeToggle()}`}>
-              <Link href="/contact"><a className={navbar.navLink}>Contact</a></Link>
+            <li className={`${navbar.navItem} ${fadeToggle()} `}>
+              <ActiveLink href="/contact"><NavLink current={'Contact'}/></ActiveLink>
             </li>
           </ul>
         </div>

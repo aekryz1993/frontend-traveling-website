@@ -27,6 +27,10 @@
   padding: 0 1em;
 }
 
+.active {
+  background: rgb(33, 96, 151);
+}
+
 @media screen and (max-width: 768px) {
   .line {
     composes: line from "../utilities/navbar-Button.css";
