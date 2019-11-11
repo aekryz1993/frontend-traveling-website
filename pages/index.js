@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, forwardRef } from 'react';
 import scrollIntoView from 'scroll-into-view';
 import { polyfill } from 'scroll-behaviour'
 import Header from "../components/Header";
@@ -9,6 +9,8 @@ import SectionThree from '../components/main/Section3';
 import homeStyle from "../stylesheet/components/home.css";
 
 polyfill()
+
+const Section = forwardRef((props, ref) => <section innerRef={ref} {...props}>{props.children}</section>);
 
 export default () => {
   const section1 = useRef(null);
@@ -42,10 +44,10 @@ export default () => {
         <section ref={section4}><SectionThree /></section>
       </main>
       <div className={homeStyle.scrollToButtons}>
-        <div className={homeStyle.buttonSec} onClick={() => scrollToSection(section1)} data="section1"></div>
-        <div className={homeStyle.buttonSec} onClick={() => scrollToSection(section2)} data="section2"></div>
-        <div className={homeStyle.buttonSec} onClick={() => scrollToSection(section3)} data="section3"></div>
-        <div className={homeStyle.buttonSec} onClick={() => scrollToSection(section4)} data="section4"></div>
+        <div className={homeStyle.buttonSec} onClick={() => scrollToSection(section1)} data="section1">Section 1</div>
+        <div className={homeStyle.buttonSec} onClick={() => scrollToSection(section2)} data="section2">Section 2</div>
+        <div className={homeStyle.buttonSec} onClick={() => scrollToSection(section3)} data="section3">Section 3</div>
+        <div className={homeStyle.buttonSec} onClick={() => scrollToSection(section4)} data="section4">Section 4</div>
       </div>
     </Layout>
   )
