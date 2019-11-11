@@ -10,8 +10,6 @@ import homeStyle from "../stylesheet/components/home.css";
 
 polyfill()
 
-const Section = forwardRef((props, ref) => <section innerRef={ref} {...props}>{props.children}</section>);
-
 export default () => {
   const section1 = useRef(null);
   const section2 = useRef(null);

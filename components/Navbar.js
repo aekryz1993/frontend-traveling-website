@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from "next/router";
-import React, { useState, useEffect, Children } from 'react';
+import React, { useState, useEffect, Children, forwardRef } from 'react';
 import navbar from '../stylesheet/components/navbar.css'
 
 const ActiveLink = ({ children, ...props }) => {
@@ -21,6 +21,8 @@ const NavLink = ({active, current, href}) => {
     <a href={href} className={`${navbar.navLink} ${isActive(active)}`}>{current}</a>
   )
 }
+
+const MyLink = forwardRef((props, ref) => <NavLink innerRef={ref} {...props} />);
 
 const Navbar = () => {
 
@@ -70,16 +72,16 @@ const Navbar = () => {
         <div>
           <ul className={`${navbar.navLinks} ${openToggle()}`}>
             <li className={`${navbar.navItem} ${fadeToggle()} `}>
-              <ActiveLink href="/"><NavLink current={'Home'}/></ActiveLink>
+              <ActiveLink href="/"><MyLink current={'Home'}/></ActiveLink>
             </li>
             <li className={`${navbar.navItem} ${fadeToggle()} `}>
-              <ActiveLink href="/stories"><NavLink current={'Stories'}/></ActiveLink>
+              <ActiveLink href="/stories"><MyLink current={'Stories'}/></ActiveLink>
             </li>
             <li className={`${navbar.navItem} ${fadeToggle()} `}>
-              <ActiveLink href="/publications"><NavLink current={'Publications'}/></ActiveLink>
+              <ActiveLink href="/publications"><MyLink current={'Publications'}/></ActiveLink>
             </li>
             <li className={`${navbar.navItem} ${fadeToggle()} `}>
-              <ActiveLink href="/contact"><NavLink current={'Contact'}/></ActiveLink>
+              <ActiveLink href="/contact"><MyLink current={'Contact'}/></ActiveLink>
             </li>
           </ul>
         </div>
